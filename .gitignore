@@ -1,0 +1,12 @@
+# Binaries and test data
+bin/
+kord
+kord.exe
+
+# Local configuration (Privacy)
+.env
+.kord.yaml
+config.json
+
+# OS specific files
+.DS_Store
