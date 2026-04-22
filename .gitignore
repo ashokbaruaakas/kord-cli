@@ -1,12 +1,18 @@
-# Binaries and test data
+# Build outputs
 bin/
+kord-cli
 kord
 kord.exe
 
-# Local configuration (Privacy)
+# Test artifacts
+coverage.out
+*.coverprofile
+*.test
+
+# Local environment/config
 .env
-.kord.yaml
+.env.*
 config.json
 
-# OS specific files
+# OS files
 .DS_Store

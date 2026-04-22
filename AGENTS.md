@@ -12,6 +12,19 @@ go run .                 # run without compiling
 go test ./...            # run all tests
 ```
 
+## Testing workflow
+
+- Follow TDD when implementing new behavior: write failing tests first, then implement the minimum code to pass.
+- Test locations:
+  - `cmd/*_test.go` for unit tests around Cobra commands
+  - `tests/*_test.go` for feature/integration tests across CLI workflows
+- Use `github.com/stretchr/testify` (`assert`, `require`) for readable assertions.
+- Useful commands:
+  - `go test ./... -v` for full verbose test runs
+  - `go test ./... -cover` for package coverage
+  - `watchexec -c -- go test ./... -v` for continuous test runs
+  - `watchexec -c -e go -- go test ./... -v` to trigger only on Go file changes
+
 ## Architecture
 
 - `main.go` — entry point; calls `cmd.Execute()`

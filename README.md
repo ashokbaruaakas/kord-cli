@@ -19,6 +19,7 @@ A high-performance CLI tool that acts as a digital "cord," seamlessly tying toge
 - 🏷️ **Release Orchestration** — Auto-detect version tags, generate release notes, draft releases
 - 🔗 **Platform Integration** — Connect to Git, GitHub, and Notion (more task platforms coming soon)
 - 🤖 **LLM-Powered** — Leverage AI for intelligent suggestions and automations
+- 🧪 **TDD-Ready Test Setup** — Unit and feature test scaffolding with `testify` assertions
 
 ## Quick Start
 
@@ -188,6 +189,7 @@ kord stores its configuration at `~/.kord/config.json`. This file is created and
 ### Phase 1 (Current)
 
 - [x] Root command scaffolding
+- [x] Baseline test setup (unit + feature tests)
 - [ ] `kord setup` — Interactive configuration wizard
 - [ ] `kord start` — Task initialization automation
 - [ ] `kord commit` — Smart commit message generation
@@ -224,8 +226,12 @@ go run . <command>
 go test ./...
 
 # Run tests with coverage
-go test -cover ./...
+go test ./... -cover
 ```
+
+## Testing
+
+This project follows TDD and includes both unit and feature/integration tests. For full testing commands, watch-mode setup, conventions, and examples, see [TESTING.md](TESTING.md).
 
 ### Code Conventions
 
